@@ -5,7 +5,7 @@ function fetchJson() {
     fetch('client-data.json')
     .then( response => response.json() )
     .then( clientData => {
-        document.querySelector('.client-name').innerText = clientData.name;
-        document.querySelector('.accaunt-balance').innerText = clientData.balance;
+        document.querySelector('.client-name-fetch').innerText = clientData.name;
+        document.querySelector('.accaunt-balance-fetch').innerText = clientData.balance;
     })
 }

@@ -1,4 +1,4 @@
-document.querySelector('.sample-form input[type=submit]')
+document.querySelector('.sample-form button')
     .addEventListener('click', sendForm);
     
     

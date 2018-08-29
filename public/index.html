@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <title>Ajax/Fetch</title>
 </head>
 <body>
@@ -11,31 +13,89 @@
     <h1>Page loaded</h1>
     <p>Page loaded <span class='page-loaded'></span> </p>
   </section>
-  <section>
-    <h1>Ajax Html Sample</h1>
-    <div class='container-html'></div>
-    <button class='get-html'>Get Html Data</button>
-    <button class='fetch-html'>Fetch Html Data</button>
-  </section>
-    <section>
-    <h1>Ajax json Sample</h1>
-    <p>Client Name:<span class='client-name'></span></p>
-    <p>Accaunt Balance:<span class='accaunt-balance'></span></p>
-    <button class='get-json'>Get JSON Data</button>
-    <button class='fetch-json'>Fetch JSON Data</button>
-  </section>
-      <section>
-        <h1>Form Send Sample</h1>
-        <form class="sample-form">
-            <label>Client name: 
-                <input type="text" name="name" required>
-            </label>
-            <label>Client email: 
-                <input type="email" name="email" required>
-            </label>
-            <input type="submit">
-        </form>
-    </section>
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Index GET HTML
+        </button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+      <h3>Ajax/Html</h3>
+      <div class='container-html'></div>
+      <button class='get-html btn btn-success'>Get Html Data</button>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Index FETCH HTML
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+      <h3>Fetch/HTML</h3>
+      <div class='container-html-fetch'></div>
+      <button class='fetch-html btn btn-success'>Fetch Html Data</button>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Index GET JSON
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+      <h3>Ajax/JSON</h3>
+      <p>Client Name: <span class='client-name'></span></p>
+      <p>Accaunt Balance: <span class='accaunt-balance'></span></p>
+      <button class='get-json btn btn-success'>Get JSON Data</button>
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Index FETCH JSON
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+      <h3>FETCH/JSON</h3>
+      <p>Client Name: <span class='client-name-fetch'></span></p>
+      <p>Accaunt Balance: <span class='accaunt-balance-fetch'></span></p>
+      <button class='fetch-json btn btn-success'>Fetch JSON Data</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <section>
+          <h1>Form</h1>
+          <form class="sample-form">
+              <label>Client name: 
+                  <input type="text" name="name" required>
+              </label>
+              <label>Client email: 
+                  <input type="email" name="email" required>
+              </label>
+              <button type:'submit' class='btn btn-success'>Send</button>
+          </form>
+      </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src='js/index-get-html.js'></script>
     <script src='js/index-fetch-html.js'></script>
     <script src='js/index-loaded.js'></script>
