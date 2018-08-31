@@ -31,3 +31,51 @@ body > section span{
     width:100%;
     height:100%;
 }
+
+
+.to-do-list {
+  padding: 20px;
+  max-width: 350px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.to-do {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.to-do li {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding: 10px 0;
+  font-weight: 100;
+  display: flex;
+}
+
+.to-do label {
+  flex:1;
+  cursor: pointer;
+}
+
+.to-do input {
+  display: none;
+}
+
+.to-do input + label:before {
+  content: '-';
+   margin-right: 10px;
+}
+
+.add-items input {
+  padding:10px;
+  outline:0;
+  border:1px solid rgba(0,0,0,0.1);
+}
+
+.todo{
+  list-style:none;
+  padding-left:0;
+}
